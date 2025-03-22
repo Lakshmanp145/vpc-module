@@ -42,7 +42,7 @@ variable "private_subnet_cidrs" {
     type = list #we are iterating
     validation {
     condition     = length(var.private_subnet_cidrs) == 2 
-    error_message = "please provide valid two public_subnet_cidrs"
+    error_message = "please provide valid two private_subnet_cidrs"
   }
 }
 
@@ -54,7 +54,7 @@ variable "database_subnet_cidrs" {
     type = list #we are iterating
     validation {
     condition     = length(var.database_subnet_cidrs) == 2 
-    error_message = "please provide valid two public_subnet_cidrs"
+    error_message = "please provide valid two database_subnet_cidrs"
   }
 }
 
